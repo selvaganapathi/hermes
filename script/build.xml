@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="DBMerger" default="jarTask" basedir=".">
+	
+	<path id="class.path">
+			<fileset dir="lib">
+				<include name="**/*.jar" />
+			</fileset>
+	</path>
+	
+	<target name="clean" description="deletes dist and build directories">
+					<delete verbose="true" dir="dest" />
+					<delete verbose="true" dir="build" />
+	</target>
+		
+	<target name="compile-Utilities" depends="clean" description="Compiles Utilities source code.">
+				
+					<mkdir dir="dest" />		
+					<mkdir dir="build" />		
+					<javac srcdir="src" 
+			            destdir="dest" 
+			            classpathref="class.path" debug="on">
+						<compilerarg value="-Xlint:unchecked" />
+					</javac>
+			
+	</target>
+		
+		
+	
+	<target name="jarTask" depends="compile-Utilities" >
+		<unjar dest="dest">
+		  <fileset dir="lib" includes="*.jar" />
+		</unjar>
+		
+		<jar jarfile="build/hermes.jar" manifest="MANIFEST.MF"  >
+				<fileset dir="dest" />
+		</jar>
+			
+	</target>
+	
+	
+	
+	
+</project>
