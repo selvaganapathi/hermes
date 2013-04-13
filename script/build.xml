@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="DBMerger" default="jarTask" basedir=".">
+<project name="Hermes" default="jarTask" basedir="../">
 	
 	<path id="class.path">
 			<fileset dir="lib">
@@ -32,7 +32,7 @@
 		  <fileset dir="lib" includes="*.jar" />
 		</unjar>
 		
-		<jar jarfile="build/hermes.jar" manifest="MANIFEST.MF"  >
+		<jar jarfile="build/hermes.jar" manifest="extra/MANIFEST.MF"  >
 				<fileset dir="dest" />
 		</jar>
 			
