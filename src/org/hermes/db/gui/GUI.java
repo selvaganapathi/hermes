@@ -20,6 +20,7 @@ public class GUI  extends  JPanel{
 	
 	private DBMerger merger;
 	
+	
 	public GUI()
 	{
 		super(new GridLayout(1, 1));

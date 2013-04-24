@@ -17,9 +17,9 @@ public class AboutGui extends  JPanel {
 		
 		JLabel creatorsHeaderLable=new JLabel("Creators :");
 		
-		JLabel creatorsLable=new JLabel("Selvaganapathi R (selvaganapathi@intuit.com)");
+		JLabel creatorsLable=new JLabel("Selvaganapathi R (selvaopendev@gmail.com)");
 		
-		JLabel creatorsLable2=new JLabel("A.C, Suresh (Suresh_A.C@intuit.com)");
+		JLabel creatorsLable2=new JLabel("A.C, Suresh (Sureshpublicmail@gmail.com)");
 		
 		hermesLable.setBounds(20, 20, 800, 50);
 		
