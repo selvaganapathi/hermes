@@ -34,7 +34,14 @@ public class ConnectionsXmlManager {
 	
 	private void createBaseXml() throws IOException
 	{
-		File dir=new File(System.getProperty("user.home")+"/hermes");
+		File dir=null;
+		String osName=System.getProperty("os.name");
+		if(osName.equalsIgnoreCase("Windows 7"))
+		{
+		  dir=new File("c:/users/"+System.getProperty("user.name")+"/hermes");
+		}
+		else
+		 dir=new File(System.getProperty("user.home")+"/hermes");
 		
 		if(!dir.exists())
          dir.mkdir();
